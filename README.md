@@ -3,6 +3,7 @@
 - actualizar los parametros de coneccion de la base de datos en el .env
 - php artisan migrate --seed
 - php artisan key:generate
+- php artisan passport:keys
 - php artisan passport:client --personal
     - colocar como nombre al nuevo cliente "FileApi"
     - actualizar las variables de entorno en el .env las siguientes claves:
