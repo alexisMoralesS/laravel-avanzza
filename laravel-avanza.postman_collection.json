@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "0d5a4b49-89d6-480a-a053-2923e83c2416",
+		"name": "laravel-avanza",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1076826"
+	},
+	"item": [
+		{
+			"name": "list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/files",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file[]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "name[]",
+							"value": "captura",
+							"type": "text"
+						},
+						{
+							"key": "file[]",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "name[]",
+							"value": "camptura2",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"value": "sss",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/files",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sing in",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@yomail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/singin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"singin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/files/3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"files",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "force delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/files/2/force",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"files",
+						"2",
+						"force"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
